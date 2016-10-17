@@ -1,0 +1,56 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="btnclick"
+            type="com.example.administrator.semaphoredownload.MainActivity.BtnOnclick"/>
+        <variable
+            name="bean"
+            type="com.example.administrator.semaphoredownload.ThreadNameBean"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pro_one" />
+
+        <Button
+            android:text="@{bean.firstName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{btnclick.btnOneClick}"
+            android:id="@+id/btn_one" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pro__two" />
+
+        <Button
+            android:text="@{bean.secondName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{btnclick.btnTwoClick}"
+            android:id="@+id/btn_two" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pro_btn_three" />
+
+        <Button
+            android:text="@{bean.thirdName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{btnclick.btnThreeClick}"
+            android:id="@+id/btn_three" />
+    </LinearLayout>
+</layout>
